@@ -9,7 +9,7 @@ def filterbyvalue(seq, value):
 def main():
     print('download init')
     #part1 get file from s3 bucket
-    __exec = call(['aws','s3','cp',str('s3://' + os.environ['BUCKET_NAME'] + '/' + os.environ['JAR_FILE']),'.'])
+    __exec = call(['aws','s3','cp',str('s3://' + os.environ['BUCKET_NAME'] + '/' + sys.argv[1]),'.'])
     # if (__exec == 0):
     #     print('integration init')
     #     #part 2 execute with pattern
