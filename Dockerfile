@@ -34,6 +34,5 @@ RUN node -v \
 #ENV AWS_DEFAULT_REGION
 WORKDIR /root
 ADD worker.py .
-ADD entrypoint.sh .
 
-ENTRYPOINT ['./entrypoint.sh']
+ENTRYPOINT ["/usr/bin/python","worker.py"]
