@@ -1,4 +1,11 @@
 FROM xdevelsistemas/debian-env:latest
+
+
+#install awscli
+RUN apt-get install -y python-pip groff && \
+    pip install awscli
+
+
 #install node
 RUN apt-get update && \
     apt-get install -y curl && \
@@ -14,10 +21,6 @@ RUN echo "deb http://repos.mesosphere.io/debian wheezy main" | \
    &&  apt-get -y update
 
 
-#install awscli
-RUN apt-get update && \
-    apt-get install -y python-pip groff && \
-    pip install awscli
 
 
 #install phantomjs
