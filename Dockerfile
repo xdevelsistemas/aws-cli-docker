@@ -33,6 +33,5 @@ RUN node -v \
 #ENV AWS_SECRET_ACCESS_KEY
 #ENV AWS_DEFAULT_REGION
 ADD worker.py .
-ADD script.sh .
 
 CMD ["/usr/bin/python","worker.py"]
