@@ -2,7 +2,8 @@ FROM xdevelsistemas/debian-env:latest
 
 
 #install awscli
-RUN apt-get install -y python-pip groff && \
+RUN apt-get update && \
+    apt-get install -y python-pip groff && \
     pip install awscli
 
 
