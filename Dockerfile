@@ -32,7 +32,6 @@ RUN node -v \
 #ENV AWS_ACCESS_KEY_ID
 #ENV AWS_SECRET_ACCESS_KEY
 #ENV AWS_DEFAULT_REGION
-WORKDIR /root
 ADD worker.py .
 
 ENTRYPOINT ["/usr/bin/python","worker.py"]
