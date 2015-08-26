@@ -34,4 +34,4 @@ RUN node -v \
 #ENV AWS_DEFAULT_REGION
 ADD worker.py .
 
-ENTRYPOINT ["/usr/bin/python","worker.py"]
+ENTRYPOINT ["/bin/bash","&&","/usr/bin/python","worker.py","&&","exit"]
