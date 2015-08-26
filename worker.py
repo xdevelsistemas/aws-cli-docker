@@ -9,7 +9,7 @@ def filterbyvalue(seq, value):
 def main():
     print('iniciando download')
     #part1 get file from s3 bucket
-    __exec = 0 #call(['aws','s3','cp',str('s3://' + os.environ['BUCKET_NAME'] + '/' + sys.argv[1] + '.jar'),'.'])
+    __exec = call(['aws','s3','cp',str('s3://' + os.environ['BUCKET_NAME'] + '/' + sys.argv[1] + '.jar'),'.'])
     if (__exec == 0):
         print('download concluido buscando o componente para execucao')
         #part 2 execute with pattern
