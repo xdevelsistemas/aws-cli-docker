@@ -35,4 +35,4 @@ RUN node -v \
 
 ADD worker.py .
 
-ENTRYPOINT ['python','worker.py']
+ENTRYPOINT ['/usr/bin/python','worker.py']
